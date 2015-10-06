@@ -36,7 +36,7 @@ See a simple example below:
 
     cap = cv2.VideoCapture('vtest.avi')
 
-    fgbg = cv2.createBackgroundSubtractorMOG()
+    fgbg = cv2.BackgroundSubtractorMOG()
 
     while(1):
         ret, frame = cap.read()
@@ -68,7 +68,7 @@ As in previous case, we have to create a background subtractor object. Here, you
 
     cap = cv2.VideoCapture('vtest.avi')
 
-    fgbg = cv2.createBackgroundSubtractorMOG2()
+    fgbg = cv2.BackgroundSubtractorMOG2()
 
     while(1):
         ret, frame = cap.read()
@@ -102,7 +102,7 @@ It would be better to apply morphological opening to the result to remove the no
     cap = cv2.VideoCapture('vtest.avi')
 
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(3,3))
-    fgbg = cv2.createBackgroundSubtractorGMG()
+    fgbg = cv2.BackgroundSubtractorGMG()
 
     while(1):
         ret, frame = cap.read()
